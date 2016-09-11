@@ -148,9 +148,7 @@ void MainWindow::action2()
 
         this->PBdoors[openDoor]->setStyleSheet("QPushButton{background-color: yellow;}");
         this->Ldoors[openDoor]->setStyleSheet("QLabel{background-color: yellow;}");
-    }
-
-    PBdoors[openDoor]->setEnabled(false);
+    }    
 
     if(openDoor == this->car)
     {
@@ -180,6 +178,7 @@ void MainWindow::action2()
 
     for(int i = 0; i < 3; i++)
     {
+        PBdoors[i]->setEnabled(false);
         if(i == this->car)
             PBdoors[i]->setIcon(QIcon(":/dir/car.jpg"));
         else
